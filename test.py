@@ -1,8 +1,8 @@
 import unittest
 #from application.app.src.About import is_anagram
 #from ..Modules import LDAPManager
-import pakage
-from pakage.About import is_anagram
+#import pakage
+#from pakage.About import is_anagram
 
 class TestStringMethods(unittest.TestCase):
 

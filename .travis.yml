@@ -1,0 +1,18 @@
+language: python
+python: 3.6.3
+addons:
+  apt_packages:
+    - pandoc
+install:
+- pip3 install tox
+script:
+- tox -e flake8
+- tox -e isort
+- tox -e py3-tests
+- tox -e py2-tests
+after_success:
+- git config --global user.name "PythonSemVer (via TravisCI)"
+- git config --global user.email "PythonSemVer@travis"
+- pip3 install pandoc
+- python3 setup.py install
+- semantic-release publish

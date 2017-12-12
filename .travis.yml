@@ -3,12 +3,8 @@ python: 3.6.3
 addons:
   apt_packages:
     - pandoc
-install:
-- pip3 install tox
 script:
-- tox -e flake8
-- tox -e isort
-- tox -e test
+- python3 test.py
 after_success:
 - git config --global user.name "PythonSemVer (via TravisCI)"
 - git config --global user.email "PythonSemVer@travis"

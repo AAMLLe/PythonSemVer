@@ -21,12 +21,12 @@
 ##with open('requirements/base.txt', 'r') as fd:
 ##    requirements = fd.read().strip().split('\n')
 #
-#try:
-#    from semantic_release import setup_hook
-#
-#    setup_hook(sys.argv)
-#except ImportError:
-#    pass
+try:
+    from semantic_release import setup_hook
+
+    setup_hook(sys.argv)
+except ImportError:
+    pass
 
 #setup(
 #    name='python-semantic-release',
